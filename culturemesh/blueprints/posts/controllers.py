@@ -21,19 +21,34 @@ def render_post():
     user_id = current_user.get_id()
     c = Client(mock=False)
     post = c.get_post(current_post_id)
+    print('---------- c.get_post ----------')
+    print(c.get_post(current_post_id))
+    print('----------')
 
     post['network_title'] = get_network_title(c.get_network(post['id_network']))
+    print("---------- c.get_network ----------")
+    print(c.get_network(post['id_network']))
+    print('----------')
     post['username'] = c.get_user(post["id_user"])["username"]
+    print('---------- c.get_user ----------')
+    print(c.get_user(post['id_user']))
+    print('----------')
     post['time_ago'] = get_time_ago(post['post_date'])
 
     # NOTE: this will not show more than the latest 100 replies
     replies = c.get_post_replies(post["id"], NUM_REPLIES_TO_SHOW)
+    print('---------- replies ----------')
+    print(replies)
+    print('----------')
     replies = sorted(replies, key=lambda x: int(x['id']))
 
     error_msg = None
 
     for reply in replies:
         reply['username'] = c.get_user(reply["id_user"])["username"]
+        print('---------- c.get_user(reply) ----------')
+        print(c.get_user(reply['id_user']))
+        print('----------')
         reply['time_ago'] = get_time_ago(reply['reply_date'])
 
     new_form = CreatePostReplyForm()
