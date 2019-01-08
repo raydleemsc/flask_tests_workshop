@@ -52,11 +52,11 @@ Unit Testing
 Unit testing takes a reductionist approach by focusing on the parts of a program
 rather than the whole. As a gross generalization, the idea is:
 
-> Break the program into all its little pieces, each of which has well-defined
-> behavior. If we are sure that each little piece behaves as expected, then when
-> we put the pieces all back together, the program should also behave as
-> expected. Therefore, we write tests to verify that each piece--each *unit*--of
-> the program behaves correctly.
+    Break the program into all its little pieces, each of which has well-defined
+    behavior. If we are sure that each little piece behaves as expected, then
+    when we put the pieces all back together, the program should also behave as
+    expected. Therefore, we write tests to verify that each piece--each
+    *unit*--of the program behaves correctly.
 
 Of course, this is incredibly optimistic. Bugs can often hide in how parts of
 the program interact, and it is quite time-consuming to actually test each part
@@ -103,17 +103,17 @@ Getting Started
 
 #. Clone this repository by running
 
-    .. code-block:: console
+   .. code-block:: console
 
-        $ git clone https://github.com/Code-the-Change/flask_tests_workshop.git
+       $ git clone https://github.com/Code-the-Change/flask_tests_workshop.git
 
 #. Install python from https://python.org or via your favorite package manager
 
 #. Install ``virtualenv``
 
-    .. code-block:: console
+   .. code-block:: console
 
-      $ pip3 install virtualenv
+     $ pip3 install virtualenv
 
 #. If you get a note from ``pip`` about ``virtualenv`` not being in your
    ``PATH``, you need to perform this step. ``PATH`` is a variable accessible
@@ -123,51 +123,52 @@ Getting Started
    to add python's packages to your ``PATH`` by editing or creating the file
    ``~/.bash_profile`` on MacOS. To that file add the following lines:
 
-    .. code-block:: console
+   .. code-block:: console
 
-      PATH="<Path from pip message>:$PATH"
-      export PATH
+     PATH="<Path from pip message>:$PATH"
+     export PATH
 
 #. Then you can install dependencies into a virtual environment
 
-    .. code-block:: console
+   .. code-block:: console
 
-      $ cd flask_tests_workshop
-      $ virtualenv venv
-      $ source venv/bin/activate
-      $ pip install -r requirements.txt
+     $ cd flask_tests_workshop
+     $ virtualenv venv
+     $ source venv/bin/activate
+     $ pip install -r requirements.txt
 
 #. Make the start script executable
 
-    .. code-block:: console
+   .. code-block:: console
 
-        chmod 700 run.sh
+       chmod 700 run.sh
 
 #. Start the app
 
-    .. code-block:: console
+   .. code-block:: console
 
-        ./run.sh
+       ./run.sh
 
-    You'll see something like this on the terminal:
+   You'll see something like this on the terminal:
 
-    .. code-block:: console
+   .. code-block:: console
 
-      $ python run.py
-       * Restarting with stat
-       * Debugger is active!
-       * Debugger PIN: XXX-XXX-XXX
-       * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+     $ python run.py
+      * Restarting with stat
+      * Debugger is active!
+      * Debugger PIN: XXX-XXX-XXX
+      * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 
-    You can then head over to your browser and type in
-    http://127.0.0.1:8080/ on the address bar. You should now see the home
-    page of the app.
+   You can then head over to your browser and type in
+   http://127.0.0.1:8080/ on the address bar. You should now see the home
+   page of the app.
 
-    .. note:: By default, the website (even if running locally) really
-      communicates with the live CultureMesh API.
+   .. note:: By default, the website (even if running locally) really
+     communicates with the live CultureMesh API.
 
 #. You can use any editor you like, but this guide will point out some shortcuts
-   for `PyCharm <https://www.jetbrains.com/pycharm/>` (Community Edition) users.
+   for `PyCharm <https://www.jetbrains.com/pycharm/>`_ (Community Edition)
+   users.
 
 #. The ``master`` branch of this repository stores the starter code you should
    start with and make changes to as you follow along with the guide. Completed
