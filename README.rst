@@ -105,7 +105,7 @@ Getting Started
 
    .. code-block:: console
 
-       $ git clone https://github.com/Code-the-Change/flask_tests_workshop.git
+       $ git clone https://github.com/raydleemsc/flask_tests_workshop.git
 
 #. Install python from https://python.org or via your favorite package manager
 
@@ -136,6 +136,15 @@ Getting Started
      $ virtualenv venv
      $ source venv/bin/activate
      $ pip install -r requirements.txt
+
+    Or, for Windows - 
+
+   .. code-block:: console
+
+     \> cd flask_tests_workshop
+     flask_tests_workshop\> virtualenv venv
+     flask_tests_workshop\> venv/Scripts/activate
+     flask_tests_workshop\> pip install -r requirements.txt
 
 #. Make the start script executable
 
