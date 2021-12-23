@@ -137,14 +137,14 @@ Getting Started
      $ source venv/bin/activate
      $ pip install -r requirements.txt
 
-   Or, for Windows - 
+   Or, for Windows (where {devlib_path} is your development library path) - 
 
    .. code-block:: console
 
-     \> cd flask_tests_workshop
-     flask_tests_workshop\> virtualenv venv
-     flask_tests_workshop\> venv/Scripts/activate
-     flask_tests_workshop\> pip install -r requirements.txt
+     {devlib_path}\> cd flask_tests_workshop
+     {devlib_path}\flask_tests_workshop\> virtualenv venv
+     {devlib_path}\flask_tests_workshop\> venv\Scripts\activate
+     {devlib_path}\flask_tests_workshop\> pip install -r requirements.txt
 
 #. Make the start script executable
 
@@ -158,11 +158,17 @@ Getting Started
 
        ./run.sh
 
+   Or, for Windows -
+
+   .. code-block:: console
+
+       run.bat
+
    You'll see something like this on the terminal:
 
    .. code-block:: console
 
-     $ python run.py
+     $ python -u run.py
       * Restarting with stat
       * Debugger is active!
       * Debugger PIN: XXX-XXX-XXX
