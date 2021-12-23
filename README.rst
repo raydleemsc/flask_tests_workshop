@@ -137,7 +137,7 @@ Getting Started
      $ source venv/bin/activate
      $ pip install -r requirements.txt
 
-    Or, for Windows - 
+   Or, for Windows - 
 
    .. code-block:: console
 
